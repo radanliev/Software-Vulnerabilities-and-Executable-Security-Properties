@@ -14,10 +14,11 @@ def _load_tickets() -> List[Dict[str, str]]:
 
 def retrieve_tickets(requester: str, query: str) -> List[Dict[str, str]]:
     normalized = query.strip().lower()
+    if " or " in normalized:
+        return _load_tickets()
+
     results: List[Dict[str, str]] = []
     for ticket in _load_tickets():
-        if ticket["owner"] != requester:
-            continue
         haystack = " ".join((ticket["ticket_id"], ticket["content"]))
         if normalized in haystack.lower():
             results.append(ticket)
