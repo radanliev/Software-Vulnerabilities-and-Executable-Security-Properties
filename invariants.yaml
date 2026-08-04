@@ -1,0 +1,4 @@
+invariants:
+  - id: INV-1
+    title: Tenant-scoped knowledge retrieval
+    statement: A requester must only retrieve tickets that they own.

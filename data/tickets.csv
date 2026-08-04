@@ -1,0 +1,4 @@
+ticket_id,owner,content
+TICKET-100,customer_a,customer_a password reset request
+TICKET-101,customer_b,customer_b billing dispute details
+TICKET-102,customer_a,customer_a MFA enrollment follow-up
